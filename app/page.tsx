@@ -29,6 +29,7 @@ interface Publication {
   contact_email?: string
   user_id: string
   status: string
+  created_at: string
 }
 
 export default function HomePage() {
@@ -80,7 +81,8 @@ export default function HomePage() {
           contact_phone,
           contact_email,
           user_id,
-          status
+          status,
+          created_at
         `)
         .in("status", ["active", "resolved"])
         .order("is_urgent", { ascending: false })
